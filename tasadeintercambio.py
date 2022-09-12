@@ -17,4 +17,5 @@ while cripto != "":
     else:
         print(resultado["error"])
     
-    #cripto = input("Introduzca una cripto conocida: ") PREGUNTAR PORQUE ESTA LÍNEA 
+    cripto = input("Introduzca una cripto conocida: ") 
+ #Prueba
