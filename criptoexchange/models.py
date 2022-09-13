@@ -1,5 +1,10 @@
+
+from logging import exception
 import requests
 from config import apikey
+
+class ModelError(exception):
+    pass
 
 
 class TodoCoinApiIo:
@@ -30,6 +35,9 @@ class Cambio:
         resultado = r.json()
         if r.status_code == 200:
             self.tasa = resultado["rate"]
+            self.horafecha = resultado ["time"]
+        else:
+            raise ModelError("{} - {}".format(r.status_code,r.error))
 
 
         
