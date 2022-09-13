@@ -2,6 +2,8 @@
 
 from criptoexchange.models import TodoCoinApiIo,Cambio
 from config import apikey
+import pytest
+
 
 def test_todocoin(): #definimos funcion
     todas = TodoCoinApiIo() #instanciamos todocoinapio
